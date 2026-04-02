@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SKILLSYNC - Online Learning Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color:aqua;
+        }
+
+        .hero-section {
+            padding: 80px 0;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease;
+        }
+
+        .footer {
+            padding: 20px 0;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+        filter: invert(1);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand text-success fw-bold" href="index.html">SKILLSYNC<i class="bi bi-house-fill"></i></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="course.html">Courses</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Account <i class="bi bi-person-circle"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="login.html">Login</a></li>
+            <li><a class="dropdown-item" href="register.html">Register</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search Courses">
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+
+<div class="container hero-section">
+  <div class="row align-items-center">
+
+    <div class="col-md-6">
+      <h1 class="fw-bold text-success">Learn Anytime, Anywhere</h1>
+      <p class="mt-3">Upgrade your skills with our expert-led online courses and achieve your career goals.</p>
+      <a href="course.html" class="btn btn-success rounded-pill mt-3">Explore Courses</a>
+    </div>
+
+    <div class="col-md-6">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow">
+
+          <div class="carousel-item active">
+            <img src="images/projectlogo.png" class="d-block w-100" alt="Course Image 1">
+          </div>
+
+          <div class="carousel-item">
+            <img src="images/onlinelearning.png" class="d-block w-100" alt="Course Image 2">
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= FEATURED COURSES ================= -->
+
+<div class="container mt-5">
+  <h2 class="text-center text-success mb-4">Featured Courses</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card shadow h-100">
+        <img src="images/webdevelope.png" class="card-img-top" alt="Web Development">
+        <div class="card-body text-center">
+          <h5 class="card-title">Web Development</h5>
+          <p class="card-text">Learn HTML, CSS & Bootstrap to build modern websites.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow h-100">
+        <img src="images/ds.png" class="card-img-top" alt="Data Science">
+        <div class="card-body text-center">
+          <h5 class="card-title">Data Science</h5>
+          <p class="card-text">Master data analysis and visualization skills.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow h-100">
+        <img src="images/uiux.png" class="card-img-top" alt="UI/UX Design">
+        <div class="card-body text-center">
+          <h5 class="card-title">UI/UX Design</h5>
+          <p class="card-text">Design beautiful and user-friendly interfaces.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-light text-center footer mt-5">
+  <div class="container">
+    <p class="mb-2">© 2025 SKILLSYNC. All Rights Reserved.</p>
+    <div>
+      <i class="bi bi-facebook me-2"></i>
+      <i class="bi bi-instagram me-2"></i>
+      <i class="bi bi-twitter me-2"></i>
+      <i class="bi bi-linkedin me-2"></i>
+      <i class="bi bi-youtube"></i>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

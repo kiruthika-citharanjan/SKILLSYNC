@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - SkillSync</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to right, aqua, aqua);
+    }
+  </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+    
+    
+
+  <div class="card shadow-lg p-4" style="width: 400px; border-radius: 15px;">
+    <h3 class="text-center mb-4 fw-bold">Login</h3>
+
+    <form id="loginForm">
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+      </div>
+
+      <button type="button" class="btn btn-primary w-100 mb-3" onclick="loginUser()">
+        Login
+      </button>
+
+      <p class="text-center mb-0">
+        Not a member?
+        <a href="register.html" class="fw-semibold text-decoration-none">Register</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Login Script -->
+  <script>
+    function loginUser() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (email === "" || password === "") {
+        alert("Please enter both email and password.");
+        return;
+      }
+
+      // Redirect to homepage
+      window.location.href = "index.html";  
+      
+    }
+  </script>
+
+  
+
+</body>
+</html>
