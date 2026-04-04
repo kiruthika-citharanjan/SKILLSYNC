@@ -16,13 +16,13 @@
 </head>
 
 <body class="d-flex justify-content-center align-items-center vh-100">
-    
-    
 
   <div class="card shadow-lg p-4" style="width: 400px; border-radius: 15px;">
     <h3 class="text-center mb-4 fw-bold">Login</h3>
 
-    <form id="loginForm">
+    <!-- ✅ Use onsubmit -->
+    <form id="loginForm" onsubmit="handleLogin(event)">
+      
       <div class="mb-3">
         <label class="form-label">Email</label>
         <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
@@ -33,7 +33,8 @@
         <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
       </div>
 
-      <button type="button" class="btn btn-primary w-100 mb-3" onclick="loginUser()">
+      <!-- ✅ Change to submit -->
+      <button type="submit" class="btn btn-success w-100 mb-3">
         Login
       </button>
 
@@ -47,24 +48,28 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Login Script -->
   <script>
-    function loginUser() {
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+    function handleLogin(event) {
+      event.preventDefault();
 
-      if (email === "" || password === "") {
-        alert("Please enter both email and password.");
+      const form = event.target;
+
+      // ✅ Built-in validation
+      if (!form.checkValidity()) {
+        form.reportValidity();
         return;
       }
 
-      // Redirect to homepage
-      window.location.href = "index.html";  
-      
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // (Optional) you can add real authentication later
+      console.log("Logged in:", email);
+
+      // ✅ Redirect after successful validation
+      window.location.href = "index.html";
     }
   </script>
-
-  
 
 </body>
 </html>
